@@ -33,6 +33,7 @@ Normalizer =
     'S'
     'U'
     'A'
+    'P'
     'IMG'
     'OL'
     'UL'

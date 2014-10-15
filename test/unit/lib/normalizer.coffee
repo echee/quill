@@ -31,13 +31,13 @@ describe('Normalizer', ->
     tests =
       'inline with text':
         initial:  '<span>What</span>Test'
-        expected: '<div>WhatTest</div>'
+        expected: '<p>WhatTest</p>'
       'whitelist line node':
         initial:  '<div>Test</div>'
-        expected: '<div>Test</div>'
+        expected: '<p>Test</p>'
       'pull text node':
         initial:  '<div><div>AB<div>C</div></div></div>'
-        expected: '<div>AB</div><div>C</div>'
+        expected: '<p>AB</p><div>C</div>'
 
     _.each(tests, (test, name) ->
       it(name, ->

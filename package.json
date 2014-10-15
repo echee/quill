@@ -1,5 +1,5 @@
 {
-  "name": "quilljs",
+  "name": "rmp-quilljs",
   "version": "0.17.6",
   "description": "Cross browser rich text editor",
   "author": "Jason Chen <jhchen7@gmail.com>",
@@ -71,5 +71,9 @@
     "editor",
     "rich text",
     "wysiwyg"
-  ]
+  ],
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  }
 }
