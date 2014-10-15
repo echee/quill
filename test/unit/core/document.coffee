@@ -21,9 +21,9 @@ describe('Document', ->
         expected: '<p><b>Test</b></p>'
       'block pulling':
         initial:  '<div><div><div><div><b>Test</b><div>Test</div></div></div></div></div>'
-        expected: '<p><b>Test</b></p><p>Test</p>'
+        expected: '<p><b>Test</b></p><p>Test</div>'
       'with breaks':
-        initial:  '<p>A<br>B<br>C</p>'
+        initial:  '<div>A<br>B<br>C</div>'
         expected: '<p>A<br></p><p>B<br></p><p>C</p>'
       'pull and break':
         initial:  '<div><div><div>A</div>B<br>C</div></div>'

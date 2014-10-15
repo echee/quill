@@ -32,8 +32,8 @@ describe('Format', ->
       value: 'jason'
     line:
       format: new Quill.Format(document, Quill.Format.FORMATS.align)
-      existing: '<div style="text-align: right;">Text</div>'
-      missing: '<div>Text</div>'
+      existing: '<p style="text-align: right;">Text</p>'
+      missing: '<p>Text</p>'
       value: 'right'
     complex:
       format: new Quill.Format(document, Quill.Format.FORMATS.bold)
@@ -62,7 +62,7 @@ describe('Format', ->
     )
 
     it("bullet missing", ->
-      @container.innerHTML = '<ul><li>One</li></ul><div>Two</div><ul><li>Three</li></ul>'
+      @container.innerHTML = '<ul><li>One</li></ul><p>Two</p><ul><li>Three</li></ul>'
       format = new Quill.Format(document, Quill.Format.FORMATS.bullet)
       li = @container.firstChild.childNodes[1]
       expect(format.match(li)).toBe(false)
@@ -165,7 +165,7 @@ describe('Format', ->
     )
 
     it('bullets', ->
-      @container.innerHTML = '<ul><li>One</li></ul><div>Two</div><ul><li>Three</li></ul>'
+      @container.innerHTML = '<ul><li>One</li></ul><p>Two</p><ul><li>Three</li></ul>'
       format = new Quill.Format(document, Quill.Format.FORMATS.bullet)
       p = @container.childNodes[1]
       format.add(p, true)
@@ -193,15 +193,15 @@ describe('Format', ->
       format = new Quill.Format(document, Quill.Format.FORMATS.bullet)
       li = @container.firstChild.childNodes[1]
       format.remove(li)
-      expect(@container).toEqualHTML('<ul><li>One</li></ul><div>Two</div><ul><li>Three</li></ul>')
+      expect(@container).toEqualHTML('<ul><li>One</li></ul><p>Two</p><ul><li>Three</li></ul>')
     )
 
     it('line format without parentTag', ->
-      @container.innerHTML = '<div>One</div><h1>Two</h1><div>Three</div>'
+      @container.innerHTML = '<p>One</p><h1>Two</h1><p>Three</p>'
       format = new Quill.Format(document, type: Quill.Format.types.LINE, tag: 'H1')
       line = @container.childNodes[1]
       format.remove(line)
-      expect(@container).toEqualHTML('<div>One</div><div>Two</div><div>Three</div>')
+      expect(@container).toEqualHTML('<p>One</p><p>Two</p><p>Three</p>')
     )
   )
 )
