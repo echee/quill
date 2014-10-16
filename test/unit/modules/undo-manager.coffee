@@ -5,7 +5,7 @@ describe('UndoManager', ->
     @container = $('#editor-container').get(0)
     @container.innerHTML = '
       <div>
-        <div>The lazy fox</div>
+        <p>The lazy fox</p>
       </div>'
     @quill = new Quill(@container.firstChild, {
       modules: {

@@ -23,6 +23,7 @@ DEFAULT_STYLES =
     'tab-size'    : '4'
     'white-space' : 'pre-wrap'
   '.editor-container div'        : { 'margin': '0', 'padding': '0' }
+  '.editor-container p'          : { 'margin': '0', 'padding': '0' }
   '.editor-container a'          : { 'text-decoration': 'underline' }
   '.editor-container b'          : { 'font-weight': 'bold' }
   '.editor-container i'          : { 'font-style': 'italic' }

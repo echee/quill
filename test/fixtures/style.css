@@ -1,3 +1,7 @@
 .editor-container > div {
   line-height: 25px;
 }
+
+.editor-container > p {
+  line-height: 25px;
+}
